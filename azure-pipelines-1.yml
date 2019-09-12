@@ -1,0 +1,10 @@
+steps:
+- task: AzureResourceGroupDeployment@2
+  inputs:
+    azureSubscription: 'fea00b01-c971-49de-b151-d91485ae3243'
+    action: 'Create Or Update Resource Group'
+    resourceGroupName: 'RG-PIPELINES'
+    location: 'Central US'
+    templateLocation: 'Linked artifact'
+    csmFile: 'CreateAzureStorage/azuredeploy.json'
+    deploymentMode: 'Incremental'
